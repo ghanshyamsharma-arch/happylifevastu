@@ -1,0 +1,1059 @@
+/* ============================================================
+   ASTROVEDIC — THEME OVERRIDE CSS
+   Drop this AFTER app.css and newcss.css in your layout.
+   Does NOT touch any PHP / Blade logic.
+   Brown + Gold + White only. No purple.
+   ============================================================ */
+
+/* ── 1. DESIGN TOKENS ─────────────────────────────────────── */
+:root {
+  --gold:        #c9a84c;
+  --gold-light:  #e0c068;
+  --gold-pale:   #fdf6e3;
+  --dark:        #1a0e05;
+  --dark-mid:    #2d1a08;
+  --dark-card:   #261507;
+  --white:       #ffffff;
+  --cream:       #faf4ea;
+  --cream-mid:   #f2e8d0;
+  --border:      #e8d5b0;
+  --border-gold: rgba(201,168,76,0.3);
+  --text-dark:   #2c1a08;
+  --text-mid:    #6b4c22;
+  --text-muted:  #b08a55;
+}
+
+/* ── 2. GLOBAL RESETS (only what's needed) ─────────────────── */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--white);
+  color: var(--text-dark);
+}
+
+/* Gold separator between sections */
+.section-sep {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-gold), transparent);
+  border: none;
+  margin: 0;
+}
+
+/* ── 3. SHARED SECTION HELPERS ────────────────────────────── */
+.theme-eyebrow {
+  font-family: 'Cinzel', 'Georgia', serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: .35rem;
+}
+
+.theme-gold-line {
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  margin: .6rem 0 1.1rem;
+  display: block;
+}
+
+.theme-sec-title {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: clamp(18px, 2.5vw, 22px) !important;
+  font-weight: 600 !important;
+  color: var(--text-dark) !important;
+  margin-bottom: .2rem !important;
+}
+
+.theme-sec-title-light {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: clamp(18px, 2.5vw, 22px) !important;
+  font-weight: 600 !important;
+  color: #f5e6c8 !important;
+  margin-bottom: .2rem !important;
+}
+
+/* ── 4. LIVE SESSIONS SECTION ─────────────────────────────── */
+.astroway-live-astrologers {
+  background: var(--dark) !important;
+  padding: 2.75rem 0 !important;
+}
+
+.astroway-live-astrologers h2 {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  color: #f5e6c8 !important;
+  font-size: clamp(18px, 2.5vw, 22px) !important;
+  letter-spacing: 1px;
+}
+
+.astroway-live-astrologers p {
+  color: #7a6445 !important;
+}
+
+.astroway-live-astrologers .view-more {
+  font-family: 'Cinzel', 'Georgia', serif;
+  font-size: 11px;
+  letter-spacing: .8px;
+  color: var(--gold) !important;
+  border: 1px solid var(--border-gold) !important;
+  background: transparent !important;
+  padding: 8px 20px !important;
+  border-radius: 50px !important;
+  transition: background .25s;
+}
+
+.astroway-live-astrologers .view-more:hover {
+  background: rgba(201,168,76,.12) !important;
+}
+
+/* ── 5. HOROSCOPE SECTION ─────────────────────────────────── */
+.as_padderTop80.as_padderBottom30 {
+  background: var(--cream) !important;
+}
+
+.as_padderTop80.as_padderBottom30 .as_heading {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  color: var(--text-dark) !important;
+  font-size: clamp(18px, 2.5vw, 22px) !important;
+}
+
+.as_padderTop80.as_padderBottom30 .size_number {
+  color: var(--text-muted) !important;
+  font-size: 13px !important;
+}
+
+.daily_horoscope_box {
+  background: var(--white) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 14px !important;
+  padding: .85rem .6rem !important;
+  transition: border-color .25s, box-shadow .25s !important;
+  cursor: pointer;
+}
+
+.daily_horoscope_box:hover {
+  border-color: var(--gold) !important;
+  box-shadow: 0 4px 16px rgba(201,168,76,.14) !important;
+}
+
+.daily_horoscope_box h5 {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: 12px !important;
+  color: var(--text-dark) !important;
+  margin-top: .4rem !important;
+}
+
+/* ── 6. PRODUCTS / SHOP SECTION ───────────────────────────── */
+/* Section wrapper already has class astro-shop-section */
+.astro-shop-section {
+  background: var(--dark) !important;
+  padding: 3rem 0 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.astro-shop-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  flex-wrap: wrap !important;
+  gap: 1rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.section-eyebrow {
+  font-family: 'Cinzel', 'Georgia', serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: .35rem;
+  display: block;
+}
+
+.section-title {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: clamp(18px, 2.5vw, 22px) !important;
+  font-weight: 600 !important;
+  color: #f5e6c8 !important;
+  line-height: 1.3 !important;
+  margin-bottom: 0 !important;
+}
+
+.gold-divider {
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  margin: .7rem 0 0;
+  display: block;
+}
+
+.see-all-btn {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: 11px !important;
+  letter-spacing: .8px !important;
+  color: var(--gold) !important;
+  border: 1px solid var(--border-gold) !important;
+  background: transparent !important;
+  padding: 8px 20px !important;
+  border-radius: 50px !important;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: background .25s;
+  white-space: nowrap;
+}
+
+.see-all-btn:hover {
+  background: rgba(201,168,76,.12) !important;
+  color: var(--gold-light) !important;
+}
+
+/* Product grid */
+.astro-products-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)) !important;
+  gap: 20px !important;
+}
+
+/* Product card */
+.astro-product-card {
+  background: linear-gradient(145deg, #2a1a0a, #1e1208) !important;
+  border: 1px solid rgba(201,168,76,.3) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  transition: transform .3s, border-color .3s, box-shadow .3s !important;
+}
+
+.astro-product-card:hover {
+  transform: translateY(-5px) !important;
+  border-color: rgba(201,168,76,.7) !important;
+  box-shadow: 0 12px 32px rgba(201,168,76,.1) !important;
+}
+
+.card-top-glow {
+  height: 2px !important;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent) !important;
+  display: block !important;
+}
+
+.card-img-wrap {
+  height: 175px !important;
+  background: #0d0804 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 1rem 1rem 0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  position: relative;
+}
+
+.card-img-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 45px;
+  background: linear-gradient(to top, #1e1208, transparent);
+}
+
+.card-img-wrap img {
+  max-width: 100% !important;
+  max-height: 150px !important;
+  object-fit: contain !important;
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.astro-product-card:hover .card-img-wrap img {
+  transform: scale(1.05);
+}
+
+.astro-product-card .card-body {
+  padding: .85rem 1rem 1rem !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.card-badge {
+  font-size: 9px !important;
+  letter-spacing: 1.2px !important;
+  color: var(--gold) !important;
+  background: rgba(201,168,76,.12) !important;
+  border: 1px solid rgba(201,168,76,.3) !important;
+  padding: 2px 10px !important;
+  border-radius: 50px !important;
+  text-transform: uppercase !important;
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  display: inline-block !important;
+  margin-bottom: .5rem !important;
+}
+
+.card-product-name {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #f5e6c8 !important;
+  margin-bottom: .35rem !important;
+  line-height: 1.35 !important;
+}
+
+.card-product-desc {
+  font-size: 12px !important;
+  color: #7a6445 !important;
+  line-height: 1.65 !important;
+  margin-bottom: .85rem !important;
+}
+
+.card-footer {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  border-top: 1px solid rgba(201,168,76,.18) !important;
+  padding-top: .65rem !important;
+  background: transparent !important;
+  gap: .5rem !important;
+}
+
+.price-label {
+  display: block !important;
+  font-size: 9px !important;
+  color: #6a5535 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .5px !important;
+  margin-bottom: 2px !important;
+}
+
+.price-value {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--gold) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+}
+
+.price-value img {
+  width: 14px !important;
+}
+
+.buy-btn {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: 10px !important;
+  letter-spacing: .8px !important;
+  background: linear-gradient(135deg, var(--gold), #a07830) !important;
+  color: var(--dark) !important;
+  border: none !important;
+  padding: 8px 15px !important;
+  border-radius: 50px !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: opacity .2s;
+  white-space: nowrap;
+}
+
+.buy-btn:hover {
+  opacity: .85 !important;
+  color: var(--dark) !important;
+}
+
+/* ── 7. ASTROLOGERS SECTION ───────────────────────────────── */
+.astroway-astrologers {
+  background: var(--white) !important;
+  padding: 2.75rem 0 !important;
+  margin-top: 0 !important;
+}
+
+.astroway-astrologers h2.heading,
+.astroway-astrologers .sec-t {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  color: var(--text-dark) !important;
+  font-size: clamp(18px, 2.5vw, 22px) !important;
+  letter-spacing: .5px !important;
+}
+
+.astroway-astrologers p {
+  color: var(--text-muted) !important;
+  font-size: 13px !important;
+}
+
+/* Owl carousel astrologer cards */
+.astroway-astrologers .item.expertOnline.psychic-card {
+  background: var(--white) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 16px !important;
+  padding: 1rem .75rem !important;
+  text-align: center !important;
+  box-shadow: none !important;
+  transition: border-color .25s, box-shadow .25s !important;
+}
+
+.astroway-astrologers .item.expertOnline.psychic-card:hover {
+  border-color: var(--gold) !important;
+  box-shadow: 0 4px 18px rgba(201,168,76,.14) !important;
+}
+
+/* Astrologer profile image */
+.astro-profile img.img-fluid {
+  width: 70px !important;
+  height: 70px !important;
+  border-radius: 50% !important;
+  border: 2px solid rgba(201,168,76,.5) !important;
+  object-fit: cover !important;
+  margin: 0 auto .6rem !important;
+  display: block !important;
+  background: var(--gold-pale) !important;
+}
+
+.astro-profile {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+p.astro-name {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: 11px !important;
+  color: var(--text-dark) !important;
+  margin-bottom: .35rem !important;
+}
+
+.astroway-astrologers .colorblack {
+  color: var(--text-mid) !important;
+  font-size: 11px !important;
+}
+
+.astroway-astrologers .color-red {
+  color: var(--gold) !important;
+}
+
+/* Stars */
+.astroway-astrologers .filled-star {
+  color: var(--gold) !important;
+  font-size: 10px !important;
+}
+
+.astroway-astrologers .empty-star {
+  color: var(--border) !important;
+  font-size: 10px !important;
+}
+
+/* Sponsored badge */
+.astroway-astrologers .must-try-badge {
+  background: var(--gold) !important;
+  color: var(--dark) !important;
+  font-size: 9px !important;
+  font-family: 'Cinzel', 'Georgia', serif !important;
+}
+
+/* ── 8. STORIES SECTION ────────────────────────────────────── */
+/* Wrapper — container with class "container mt-5 mb-5" */
+.stories-container {
+  display: flex !important;
+  gap: 16px !important;
+  overflow-x: auto !important;
+  padding: 8px 4px 12px !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  justify-content: flex-start !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.stories-container::-webkit-scrollbar { height: 3px !important; }
+.stories-container::-webkit-scrollbar-thumb {
+  background: rgba(201,168,76,.4) !important;
+  border-radius: 2px !important;
+}
+
+/* Parent section bg */
+.container:has(.stories-container) {
+  /* fallback via parent wrapper will be handled via surrounding div */
+}
+
+.story {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  flex: 0 0 auto !important;
+}
+
+.story img {
+  width: 68px !important;
+  height: 68px !important;
+  border-radius: 50% !important;
+  padding: 2.5px !important;
+  /* Gold gradient ring for unviewed */
+  border: none !important;
+  outline: 2.5px solid transparent !important;
+  background:
+    linear-gradient(var(--white), var(--white)) padding-box,
+    linear-gradient(135deg, var(--gold), #7a4f0a, var(--gold-light)) border-box !important;
+  border: 2.5px solid transparent !important;
+  object-fit: cover !important;
+  transition: transform .25s;
+}
+
+.story img:hover {
+  transform: scale(1.08);
+}
+
+.story.viewed img {
+  border: 2.5px solid var(--border) !important;
+  background: none !important;
+}
+
+.story p {
+  font-size: 11px !important;
+  color: var(--text-muted) !important;
+  margin-top: .4rem !important;
+  max-width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Story section heading */
+.container h2.heading.font-28:has(+ p + .stories-container),
+h2.font-28 + p + .stories-container {
+  margin-top: 0;
+}
+
+/* ── 9. VIDEOS SECTION ─────────────────────────────────────── */
+section#calculator {
+  background: var(--dark) !important;
+  padding: 2.75rem 0 !important;
+}
+
+section#calculator h2 {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  color: #f5e6c8 !important;
+  font-size: clamp(18px, 2.5vw, 22px) !important;
+}
+
+/* Marquee cards */
+section#calculator .video-card {
+  background: linear-gradient(145deg, #2a1a0a, #1e1208) !important;
+  border: 1px solid rgba(201,168,76,.28) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+  width: 200px !important;
+  transition: border-color .3s, transform .3s !important;
+  flex-shrink: 0;
+}
+
+section#calculator .video-card:hover {
+  border-color: rgba(201,168,76,.7) !important;
+  transform: translateY(-3px) !important;
+}
+
+section#calculator .video-thumbnail {
+  width: 100% !important;
+  height: 115px !important;
+  object-fit: cover !important;
+  opacity: .82;
+  display: block;
+}
+
+section#calculator .video-title {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: 11px !important;
+  color: #d4b06a !important;
+  background: transparent !important;
+  padding: .55rem .7rem !important;
+  border-radius: 0 !important;
+  height: auto !important;
+  line-height: 1.4 !important;
+  text-align: left !important;
+}
+
+section#calculator .youtube-icon {
+  width: 36px !important;
+  opacity: .95;
+  filter: drop-shadow(0 0 4px rgba(201,168,76,.5));
+}
+
+/* ── 10. AS SEEN ON / NEWS SECTION ────────────────────────── */
+section.backimage {
+  background: var(--cream) !important;
+  padding: 2.5rem 0 !important;
+}
+
+section.backimage h3 {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  color: var(--text-dark) !important;
+  font-size: clamp(18px, 2.5vw, 22px) !important;
+  letter-spacing: .5px;
+}
+
+section.backimage .video-card {
+  background: var(--white) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+  text-align: center !important;
+  transition: border-color .25s !important;
+}
+
+section.backimage .video-card:hover {
+  border-color: var(--gold) !important;
+}
+
+section.backimage .video-thumbnail {
+  width: 100% !important;
+  height: 110px !important;
+  object-fit: cover !important;
+  opacity: .85;
+}
+
+section.backimage .video-title {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: 11px !important;
+  color: var(--text-dark) !important;
+  background: var(--cream-mid) !important;
+  padding: .5rem .65rem !important;
+  height: auto !important;
+  border-radius: 0 !important;
+}
+
+section.backimage .btn.btn-primary.btn-sm {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: 10px !important;
+  letter-spacing: .6px !important;
+  background: var(--gold) !important;
+  border: none !important;
+  color: var(--dark) !important;
+  padding: 5px 14px !important;
+  border-radius: 50px !important;
+  margin: .5rem auto !important;
+  font-weight: 600 !important;
+  display: inline-block !important;
+}
+
+/* ── 11. BLOGS SECTION ─────────────────────────────────────── */
+section.py-5.bg-white:has(.product-card.parad-shivling) {
+  background: var(--white) !important;
+  padding: 2.75rem 0 !important;
+}
+
+/* Heading row */
+section.py-5.bg-white .d-flex.justify-content-between h2.font-28 {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  color: var(--text-dark) !important;
+  font-size: clamp(18px, 2.5vw, 22px) !important;
+  padding: .5rem 0 !important;
+}
+
+/* See all articles button */
+a.button-blog {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: 11px !important;
+  letter-spacing: .8px !important;
+  color: var(--gold) !important;
+  border: 1px solid var(--border-gold) !important;
+  background: transparent !important;
+  padding: 8px 20px !important;
+  border-radius: 50px !important;
+  text-transform: none !important;
+  height: auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  transition: background .25s !important;
+}
+
+a.button-blog:hover {
+  background: rgba(201,168,76,.1) !important;
+  color: var(--gold-light) !important;
+}
+
+/* Blog cards */
+.product-card.parad-shivling {
+  background: var(--white) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  transition: border-color .25s, box-shadow .25s !important;
+  position: relative;
+}
+
+.product-card.parad-shivling::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cream), var(--gold), var(--cream));
+}
+
+.product-card.parad-shivling:hover {
+  border-color: var(--gold) !important;
+  box-shadow: 0 4px 20px rgba(201,168,76,.12) !important;
+}
+
+.product-card.parad-shivling .product-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform .3s;
+}
+
+.product-card.parad-shivling:hover .product-image {
+  transform: scale(1.04);
+}
+
+.product-card.parad-shivling h3.font-weight-700 {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: var(--text-dark) !important;
+  margin-bottom: .35rem !important;
+  line-height: 1.35 !important;
+}
+
+.product-card.parad-shivling p.text-dark {
+  font-size: 12px !important;
+  color: var(--text-muted) !important;
+  line-height: 1.65 !important;
+}
+
+span.read-more {
+  color: var(--gold) !important;
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+}
+
+/* ── 12. WHAT IS ASTROLOGY / COLLAPSE SECTION ─────────────── */
+.bg-pink-light,
+div.py-5.bg-pink-light {
+  background: var(--cream) !important;
+  padding: 2.5rem 0 !important;
+}
+
+.bg-pink-light h2.heading {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  color: var(--text-dark) !important;
+  font-size: clamp(17px, 2.2vw, 20px) !important;
+}
+
+.bg-pink-light h2.heading .fa-chevron-down,
+.bg-pink-light h2.heading .fa-chevron-up {
+  color: var(--gold) !important;
+  border-color: var(--border-gold) !important;
+}
+
+.bg-pink-light .collapse.font-14 h3,
+div#collapse-faq h3 {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  color: var(--text-dark) !important;
+  font-size: 14px !important;
+  border-left: 3px solid var(--gold) !important;
+  padding-left: .6rem !important;
+  margin: 1.25rem 0 .5rem !important;
+}
+
+.bg-pink-light .collapse p,
+div#collapse-faq p,
+div#collapse-faq li {
+  font-size: 13px !important;
+  color: var(--text-mid) !important;
+  line-height: 1.8 !important;
+}
+
+div#collapse-faq a {
+  color: var(--gold) !important;
+}
+
+/* FAQ ordered list numbers */
+div#collapse-faq ol li p.font-weight-bold {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  color: var(--text-dark) !important;
+  font-size: 12px !important;
+}
+
+/* ── 13. WHY US — DESKTOP ACCORDION ──────────────────────── */
+.astroway-about {
+  background: var(--white) !important;
+  padding: 2.75rem 0 !important;
+}
+
+.astroway-about h2.heading {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  color: var(--text-dark) !important;
+  font-size: clamp(18px, 2.5vw, 22px) !important;
+  letter-spacing: .5px !important;
+}
+
+.astroway-about > .container > .row:first-child p {
+  color: var(--text-muted) !important;
+  font-size: 13px !important;
+}
+
+/* FAQ accordion cards */
+.astroway-about .accordion .card {
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+  margin-bottom: 9px !important;
+  overflow: hidden !important;
+  background: var(--white) !important;
+}
+
+.astroway-about .accordion .card-header {
+  background: var(--white) !important;
+  border-bottom: none !important;
+  padding: .6rem .85rem !important;
+}
+
+.astroway-about .accordion .btn-header-link {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: 12px !important;
+  color: var(--text-dark) !important;
+  text-decoration: none !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  text-align: left !important;
+  padding: .2rem 0 !important;
+  white-space: normal !important;
+  line-height: 1.4 !important;
+}
+
+.astroway-about .accordion .btn-header-link:not(.collapsed) {
+  color: var(--gold) !important;
+}
+
+.astroway-about .accordion .btn-header-link::after {
+  content: '⌄';
+  font-size: 16px;
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-left: .75rem;
+  transition: transform .3s;
+}
+
+.astroway-about .accordion .btn-header-link:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+
+.astroway-about .accordion .card-body {
+  font-size: 13px !important;
+  color: var(--text-mid) !important;
+  line-height: 1.8 !important;
+  padding: .5rem .85rem 1rem !important;
+  border-top: 1px solid var(--border) !important;
+}
+
+/* ── 14. WHY US — MOBILE ──────────────────────────────────── */
+.astroway-about-mobile {
+  background: var(--cream) !important;
+  padding: 2.5rem 0 !important;
+}
+
+.astroway-about-mobile.bg-pink {
+  background: var(--cream) !important;
+}
+
+.astroway-about-mobile h2.heading {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  color: var(--text-dark) !important;
+  font-size: clamp(17px, 2.2vw, 20px) !important;
+}
+
+.astroway-about-mobile p.font-weight-semi-bold {
+  font-size: 12px !important;
+  color: var(--text-mid) !important;
+}
+
+/* ── 15. STARS (GLOBAL) ───────────────────────────────────── */
+.filled-star {
+  color: var(--gold) !important;
+}
+
+.empty-star {
+  color: var(--border) !important;
+}
+
+/* ── 16. SECTION BACKGROUND HELPERS (fix conflicts) ───────── */
+/* Override pink backgrounds with cream */
+.bg-astrologer-pink-light {
+  background: var(--cream) !important;
+}
+
+.bg-pink {
+  background: var(--cream) !important;
+}
+
+.bg-pink-light {
+  background: var(--cream) !important;
+}
+
+/* ── 17. HEADING GLOBAL ───────────────────────────────────── */
+h2.heading {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  color: var(--text-dark) !important;
+}
+
+/* ── 18. MOBILE RESPONSIVE ───────────────────────────────── */
+@media (max-width: 768px) {
+
+  .astro-products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+
+  .astro-shop-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .stories-container {
+    justify-content: flex-start !important;
+    padding-left: 0 !important;
+  }
+
+  .astroway-about {
+    display: block !important;  /* show on mobile too */
+  }
+
+  section.backimage h3 {
+    font-size: 18px !important;
+  }
+
+  .section-title {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .astro-products-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .card-img-wrap {
+    height: 150px !important;
+  }
+
+  section#calculator .video-card {
+    width: 155px !important;
+  }
+
+  section#calculator .video-thumbnail {
+    height: 90px !important;
+  }
+
+  .story img {
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  .story p {
+    font-size: 10px !important;
+  }
+
+  a.button-blog {
+    font-size: 10px !important;
+    padding: 7px 14px !important;
+  }
+
+  .astroway-astrologers .astro-profile img.img-fluid {
+    width: 58px !important;
+    height: 58px !important;
+  }
+}
+
+/* ── 19. VIDEO DESCRIPTION MODAL FIX ─────────────────────── */
+#videoModal .modal-content {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  background: var(--dark) !important;
+  border: 1px solid rgba(201,168,76,.3) !important;
+}
+
+#videoModal h3.bg-success {
+  background: var(--dark-mid) !important;
+  color: #f5e6c8 !important;
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  font-size: 13px !important;
+  letter-spacing: .5px !important;
+}
+
+#videoModal .video-description {
+  color: var(--text-mid) !important;
+  font-size: 13px !important;
+  background: var(--dark) !important;
+  line-height: 1.75 !important;
+}
+
+/* ── 20. STORY MODAL FIX ──────────────────────────────────── */
+#storyModal .modal-content {
+  border-radius: 12px !important;
+  background: var(--dark) !important;
+  border: 1px solid rgba(201,168,76,.3) !important;
+}
+
+#storyModal .modal-header {
+  background: var(--dark-mid) !important;
+  border-bottom: 1px solid rgba(201,168,76,.2) !important;
+  padding: .65rem 1rem !important;
+}
+
+#storyModal #astrologerName {
+  font-family: 'Cinzel', 'Georgia', serif !important;
+  color: #f5e6c8 !important;
+  font-size: 13px !important;
+}
+
+#storyModal .close {
+  color: var(--gold) !important;
+  opacity: 1 !important;
+}
+
+/* ── 21. CUSTOM HERO / BANNER SLIDER ─────────────────────── */
+.custom-hero-wrapper {
+  background: var(--cream) !important;
+}
+
+.banner-slider-container {
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+
+.slider-btn {
+  background: rgba(201,168,76,.85) !important;
+  border: none !important;
+  color: var(--dark) !important;
+  border-radius: 50% !important;
+}
+
+.slider-btn:hover {
+  background: var(--gold) !important;
+}
+
+.dot.active {
+  background: var(--gold) !important;
+}
+
+.dot {
+  background: var(--border) !important;
+}
+
+/* ── 22. FONT IMPORT (add to <head> if not already there) ─── */
+/*
+  Add this to your master layout <head>:
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+*/
